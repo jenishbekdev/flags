@@ -95,8 +95,9 @@ const burgerMenu = document.querySelector('.header__burger')
 const headerNav = document.querySelector('.menu')
 const burgerItem = document.querySelectorAll('.burger__item')
 const body = document.querySelector('body')
-burgerMenu.addEventListener('click', (e) => {
-    body.addEventListener('click', () => {
+
+function add(e) {
+    burgerMenu.addEventListener('click', (e) => {
         if (e.target.classList.toggle('header__burger')) {
             headerNav.style.display = 'flex'
             headerNav.style.gap = "20px"
@@ -110,4 +111,6 @@ burgerMenu.addEventListener('click', (e) => {
             burgerItem[1].style.display = 'block'
         }
     })
-})
+}
+
+add()
