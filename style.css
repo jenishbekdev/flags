@@ -69,3 +69,73 @@ select{
 .box img{
     border: 1px solid #fff;
 }
+
+.header__burger{
+    display: none;
+}
+.burger__item{
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: .3s;
+}
+@media (max-width: 800px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        background: rgba(0, 0, 0, 0.54);
+        padding: 100px 100px 100px 100px;
+        list-style: none;
+        backdrop-filter: blur(6px);
+        font-size: 24px;
+        gap: 40px;
+    }
+    select{
+        /*position: absolute;*/
+        /*top: 300px;*/
+        /*right: 70px;*/
+    }
+    .header__box{
+        display: flex;
+        gap: 20px;
+    }
+    .header__burger{
+        display: block;
+        z-index: 99;
+    }
+}
+@media (max-width: 600px){
+    select{
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+        position: absolute;
+        top: 100px;
+        /*right: 200px;*/
+
+    }
+
+}
+@media (max-width: 460px) {
+    .header__box{
+        display: flex;
+    }
+    .header__box input{
+        width: 120px;
+        height: 20px;
+    }
+    .header__box button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 20px;
+    }
+}
